@@ -20,7 +20,7 @@ for (var i=0; i<items.length; i++){
 	var descriptionBox = document.createElement("div");
 	descriptionBox.className = "dBox";
 	descriptionBox.innerHTML = items[i].description;
-	itemBox.appendChild(descriptionBox);	
+	productBox.appendChild(descriptionBox);	
 
 	var priceBox = document.createElement("div");
 	priceBox.className = "pBox";
@@ -29,20 +29,20 @@ for (var i=0; i<items.length; i++){
 }
 
 
-// var pPro = document.getElementsByClassName("stuff");
-// console.log(pPro);
-// for(var i = 0; i<pMenu.length; i++){
-//   pMenu[i].addEventListener("click", showMenu);
+var pPro = document.getElementsByClassName("stuff");
+console.log(pPro);
+for(var i = 0; i<pPro.length; i++){
+  pPro[i].addEventListener("click", showDescription);
   
-// }
+}
 
-// function showMenu(){
-//   console.log("test");
+function showDescription(){
+  console.log("test");
   
-//   var menus = this.querySelectorAll(".description")[0];
-//   if(menus.style.display === "none"){
-//     menus.style.display = "block";
-//   }else{
-//     menus.style.display = "none";
-//   }
-// }
+  var descriptions = this.querySelectorAll(".dBox")[0];
+  if(descriptions.style.display === "none"){
+    descriptions.style.display = "block";
+  }else{
+    descriptions.style.display = "none";
+  }
+}
